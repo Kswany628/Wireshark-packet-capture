@@ -40,6 +40,21 @@ The It manger in this scenario is asking for specficially web traffic. this capt
 ![image](https://github.com/user-attachments/assets/ecd66752-a50b-4c5c-aa7d-924d49c81f92)
 Now HTTPS traffic is only being shown for this capture file.
 
+# Using the display filter to show HTTP traffic
+![image](https://github.com/user-attachments/assets/bcbf6bc3-691d-4847-9f14-e073ee5a74e3)
+Since the IT manager is asking for all web traffic i also will use the display filter to show HTTP traffic in this scenario using the TCP.port == 80 capture filter.
+
+# Using display filter to search for all "client hello" in a TLS handshake in a capture
+![image](https://github.com/user-attachments/assets/d8270c91-aa43-466d-840f-3e4f073b8ce2)
+
+We want to find what websites a client is visiting. one method used is to use the tls.handshake.type == 1 display filter to show all client side http/s hello requests in the tls handshake. when the filter is applied we get the following result.
+![image](https://github.com/user-attachments/assets/94660dc8-a125-42f6-9d5e-8969291b2b6d)
+
+# Using a display filter to focus on a specific IP address
+![image](https://github.com/user-attachments/assets/85465902-b940-4306-afcb-17acf4d59e87)
+We want to show the IT manager specifically traffic that is associated with google.com. to do this we use the "ip.addr == 142.250.31.106". As we seen in the previous section with the destination IP address in the TLS handshake going to google.com was associated with the mentioned ip address. using this display filter gave us the follwing results:
+![image](https://github.com/user-attachments/assets/82e20071-f92a-4517-b79f-8921985ca8b8)
+You can now see that only web traffic associated with the specified IP address is being displayed
 
 
 *Ref 1: Network Diagram*
