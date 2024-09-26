@@ -7,9 +7,10 @@ The packet capture Lab project aimed to establish a controlled environment for s
 
 - Start a packet capture on an ethernet port and save it.
 - Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+- Detect IP addresses using a display filter.
+- Enhanced knowledge of network protocols.
+- Use conditional statements to eliminate IP packets associated with an IP address from the display
+- Using display filters to show only HTTP and HTTPS traffic.
 
 ### Tools Used
 [Bullet Points - Remove this afterwards]
@@ -54,8 +55,14 @@ We want to find what websites a client is visiting. one method used is to use th
 ![image](https://github.com/user-attachments/assets/85465902-b940-4306-afcb-17acf4d59e87)
 We want to show the IT manager specifically traffic that is associated with google.com. to do this we use the "ip.addr == 142.250.31.106". As we seen in the previous section with the destination IP address in the TLS handshake going to google.com was associated with the mentioned ip address. using this display filter gave us the follwing results:
 ![image](https://github.com/user-attachments/assets/82e20071-f92a-4517-b79f-8921985ca8b8)
-You can now see that only web traffic associated with the specified IP address is being displayed
+You can now see that only web traffic associated with the specified IP address is being displayed. if i want to further filter this by showing the IP address as the source or destination i can change "addr" to "src" or "dst" respectively.
 
+# Locate all HTTPS traffic from a capture not containing a certain IP address
+![image](https://github.com/user-attachments/assets/b7b556bd-fc21-46e4-b008-3e8ffa425d6d)
+The IT manager has now sepecified they do not want duck duck go to be displayed in packet captures to reduce clutter. in order to do this i used the "!" operator to exclude the ip address in the attached parenthesis then used "and" to combine multiple conditions. the next condition was the "(tcp.port == 443)" to show all HTTPS traffic, when applying the display filter this is the following result:
+
+![image](https://github.com/user-attachments/assets/73436a20-d608-49cc-901c-54ae4c2cd669)
+As you can see any packet information containing IP address 52.149.246.39 is not included in the current display filter.
 
 *Ref 1: Network Diagram*
 
