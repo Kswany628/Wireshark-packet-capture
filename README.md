@@ -2,7 +2,7 @@
 
 ## Objective
 
-The packet capture Lab project aimed to establish a controlled environment for simulating Wireshark on Ubuntu. The primary focus was to capture packets, save them,and use filters. The IT manager in this scenario wants to be able to capture ethernet network web traffic on the server and be able to detect certain ip addresses.
+This packet capture Lab project aimed to establish a controlled environment for simulating Wireshark on Ubuntu. The primary focus was to capture packets, save them,and use filters. The IT manager in this scenario wants to be able to capture ethernet network web traffic on the server and be able to detect certain ip addresses.
 ### Skills Learned
 
 - Start a packet capture on an ethernet port and save it.
