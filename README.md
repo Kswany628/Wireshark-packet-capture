@@ -13,14 +13,12 @@ This packet capture Lab project aimed to establish a controlled environment for 
 - Using display filters to show only HTTP and HTTPS traffic.
 
 ### Tools Used
-[Bullet Points - Remove this afterwards]
 
 - Security Information and Event Management (SIEM) system for log ingestion and analysis.
 - Network analysis tools (such as Wireshark) for capturing and examining network traffic.
 - Telemetry generation tools to create realistic network traffic and attack scenarios.
 
 ## Steps
-drag & drop screenshots here or use imgur and reference them using imgsrc
 
 # Filter for wired connections
 ![image](https://github.com/user-attachments/assets/49c2058f-06db-4c75-a277-c5d8105bbf44)
@@ -64,6 +62,6 @@ The IT manager has now sepecified they do not want duck duck go to be displayed 
 ![image](https://github.com/user-attachments/assets/73436a20-d608-49cc-901c-54ae4c2cd669)
 As you can see any packet information containing IP address 52.149.246.39 is not included in the current display filter.
 
-*Ref 1: Network Diagram*
+
 
 
